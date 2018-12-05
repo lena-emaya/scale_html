@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Shodi za hlebom</title>
+  <title>Kuda by sest'?</title>
   <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
 </head>
@@ -62,7 +62,7 @@
     }
 </style>
 <aside>
-  <div class='title'>Shodi za hlebom</div>
+  <div class='title'>Kuda by sest'?</div>
   <div id='menu'></div>
 </aside>>
 <div id='map'></div>
@@ -73,8 +73,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibGVuYWVtYXlhIiwiYSI6ImNpa3VhbXE5ZjAwMXB3eG00a
 const map = new mapboxgl.Map({
     container: 'map', 
     style: 'mapbox://styles/lenaemaya/cjn65ilsr0slc2smrvmad8eyj', 
-    center: [30.268824, 59.938058], 
-    zoom: 10.5 
+    center: [37.601210, 55.752653 ], 
+    zoom: 13.5 
 });
 
 let framesPerSecond = 15; 
@@ -96,8 +96,8 @@ map.on('load', () => {
           "geometry": {
            "type": "Point",
            "coordinates": [
-            30.347616,
-            59.923903
+            37.600952,
+            55.751540
             ]
           }
         }
@@ -144,9 +144,9 @@ map.on('load', () => {
   animateMarker(0);
 });
 
-toggleLayer('1', ['my-shops'], 'Магазины');
-toggleLayer('2', ['heatmap'], 'Хитмап');
-toggleLayer('3', ['isochrone-polygon', 'isochrone-line'], 'Изохроны');
+toggleLayer('1', ['cafe'], 'Кафе');
+toggleLayer('2', ['heatmap-cafe'], 'Хитмап');
+toggleLayer('3', ['isochrone-cafe-polygon', 'isochrone-cafe-line'], 'Изохроны');
 
 function toggleLayer (id, ids, name){
   const button = document.createElement('div');
